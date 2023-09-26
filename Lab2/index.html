@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Инвестиционная компания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-menu">
+                <a href="#about">Описание</a>
+                <a href="#investment-options">Виды инвестиций</a>
+                <a href="#strategies">Стратегии</a>
+                <a href="#feedback">Форма обратной связи</a>
+                <a href="loginpage.html">Войти</a>
+            </nav>
+            <div class="text-center py-5">
+                <h1 class="name">Инвестиционная компания</h1>
+                <h2>Управление инвестициями для финансовой стабильности</h2>
+                <p class="w-50 my-3 mx-auto">
+                    Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями
+                </p>
+                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="about">
+                <h1>Описание</h1>
+                <figure class="avatar">
+                    <img src="images/person.png" alt="Person">
+                </figure>
+                <p>
+                    Инвестиционная компания "Доход" - это тщательно отобранный коллектив профессионалов,
+                    специализирующихся на управлении инвестициями и финансовом консалтинге. Наша цель - помочь нашим
+                    клиентам
+                    создать и расширить свой финансовый портфель, обеспечивая стабильный доход и финансовую безопасность
+                    на
+                    долгосрочной основе.
+                </p>
+            </section>
+
+            <section id="investment-options">
+                <p></p>
+                <h1>Виды инвестиций</h1>
+                <p>
+                    Компания предлагает широкий спектр инвестиционных возможностей с различными уровнями риска и
+                    доходности.
+                    Наши клиенты могут выбирать из таких видов инвестиций:
+                </p>
+                <table>
+                    <tr>
+                        <th>Вид инвестиции</th>
+                        <th>Описание</th>
+                        <th>Уровень риска</th>
+                        <th>Ожидаемая доходность</th>
+                    </tr>
+                    <tr>
+                        <td>Акции на фондовом рынке</td>
+                        <td>Инвестирование в акции компаний на фондовом рынке</td>
+                        <td>Высокий</td>
+                        <td>Высокая</td>
+                    </tr>
+                    <tr>
+                        <td>Облигации и ценные бумаги</td>
+                        <td>Инвестирование в облигации и другие ценные бумаги</td>
+                        <td>Средний</td>
+                        <td>Средняя</td>
+                    </tr>
+                    <tr>
+                        <td>Инвестиции в недвижимость</td>
+                        <td>Покупка и аренда недвижимости для получения дохода</td>
+                        <td>Низкий</td>
+                        <td>Стабильная</td>
+                    </tr>
+                    <tr>
+                        <td>Финансирование стартапов и инновационных проектов</td>
+                        <td>Инвестирование в молодые компании с высоким потенциалом</td>
+                        <td>Высокий</td>
+                        <td>Высокая</td>
+                    </tr>
+                </table>
+
+                <div class="text-right">
+                    <p>
+
+                    </p>
+                    <a class="btn" href="#investment-options">Подробнее</a>
+                </div>
+            </section>
+
+            <section id="strategies">
+                <p></p>
+                <h1>Стратегии</h1>
+                <p>
+                    Наша команда экспертов разработала ряд эффективных инвестиционных стратегий, которые позволяют
+                    нашим клиентам максимизировать свой доход и управлять рисками. Наши стратегии включают:
+                </p>
+                <ul>
+                    <li>Долгосрочные инвестиции в устойчивые компании</li>
+                    <li>Активное трейдинговое управление портфелем</li>
+                    <li>Диверсификация инвестиций для снижения риска</li>
+                    <li>Использование алгоритмического трейдинга и искусственного интеллекта</li>
+                </ul>
+                <div class="text-right">
+                    <a class="btn" href="#strategies">Подробнее</a>
+                </div>
+            </section>
+
+            <section id="feedback">
+                <h1>Форма обратной связи</h1>
+            </section>
+            <section id="contact">
+                <form class="contact-form" action="https://httpbin.org/post" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="form-field">
+                        <label for="fullname">ФИО:</label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Введите ФИО">
+                    </div>
+
+                    <div class="form-field margins">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Введите Email">
+                    </div>
+
+                    <div class="form-field margins">
+                        <label for="source">Откуда узнали о нас:</label>
+                        <div class="radio-button-group margins">
+                            <label>
+                                <input type="radio" id="source-internet" name="source" value="Интернет" required>
+                                Интернет
+                            </label>
+                            <label>
+                                <input type="radio" id="source-tv" name="source" value="Телевидение">
+                                Телевидение
+                            </label>
+                            <label>
+                                <input type="radio" id="source-friends" name="source" value="Друзья">
+                                Друзья
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field margins">
+                        <label for="type">Тип обращения:</label>
+                        <select id="type" name="type">
+                            <option value="Жалоба">Жалоба</option>
+                            <option value="Предложение">Предложение</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field margins">
+                        <label for="message">Текст сообщения:</label>
+                        <textarea id="message" name="message" rows="7" required
+                            placeholder="Введите текст сообщения"></textarea>
+                    </div>
+
+
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label class="consent-label" for="consent">Даю согласие на обработку персональных данных</label>
+
+                    <div class="form-field margins">
+                        <button type="submit" class="btn">Отправить</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2023 Инвестиционная компания "Доход"
+        </div>
+    </footer>
+
+</body>
+
+</html>
