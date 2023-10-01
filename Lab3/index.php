@@ -45,7 +45,7 @@ $strategies = array(
             <nav class="main-menu">
                 <a <?php echo 'selected-menu'; ?> href="#about"<?php echo 'Описание'; ?>>Описание</a>
                 <a <?php echo 'selected-menu'; ?> href="#investment-options"<?php echo 'Виды инвестиций'; ?>>Виды инвестиций</a>
-                <a <?php echo 'selected-menu'; ?> href="#startegies"<?php echo 'Стратегии'; ?>>Стратегии</a>
+                <a <?php echo 'selected-menu'; ?> href="#strategies"<?php echo 'Стратегии'; ?>>Стратегии</a>
             </nav>
             <div class="text-center py-5">
                 <h1 class="name">Инвестиционная компания</h1>
