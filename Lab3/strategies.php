@@ -43,9 +43,9 @@ $strategies = array(
     <header class="header">
         <div class="container">
             <nav class="main-menu">
-                <a href="index.php"><?php echo 'Описание'; ?></a>
-                <a href="investmentOptions.php"><?php echo 'Виды инвестиций'; ?></a>
-                <a href="strategies.php"><?php echo 'Стратегии'; ?></a>
+                <a <?php echo 'selected-menu'; ?> href="index.php"<?php echo 'Описание'; ?>>Описание</a>
+                <a <?php echo 'selected-menu'; ?> href="investmentOptions.php"<?php echo 'Виды инвестиций'; ?>>Виды инвестиций</a>
+                <a <?php echo 'selected-menu'; ?> href="strategies.php"<?php echo 'Стратегии'; ?>>Стратегии</a>
             </nav>
             <div class="text-center py-5">
                 <h1 class="name">Инвестиционная компания</h1>
@@ -53,7 +53,7 @@ $strategies = array(
                 <p class="w-50 my-3 mx-auto">
                     Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями
                 </p>
-                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>
+                <a class="btn contact-me-btn <?php echo 'selected-menu'; ?>" href="<?php echo 'mailto:info@dohod.com'; ?>">Свяжитесь с нами</a>
             </div>
         </div>
     </header>

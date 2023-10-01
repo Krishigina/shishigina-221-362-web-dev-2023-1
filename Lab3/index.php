@@ -43,9 +43,9 @@ $strategies = array(
     <header class="header">
         <div class="container">
             <nav class="main-menu">
-                <a href="#about"><?php echo 'Описание'; ?></a>
-                <a href="#investment-options"><?php echo 'Виды инвестиций'; ?></a>
-                <a href="#strategies"><?php echo 'Стратегии'; ?></a>
+                <a <?php echo 'selected-menu'; ?> href="#about"<?php echo 'Описание'; ?>>Описание</a>
+                <a <?php echo 'selected-menu'; ?> href="#investment-options"<?php echo 'Виды инвестиций'; ?>>Виды инвестиций</a>
+                <a <?php echo 'selected-menu'; ?> href="#startegies"<?php echo 'Стратегии'; ?>>Стратегии</a>
             </nav>
             <div class="text-center py-5">
                 <h1 class="name">Инвестиционная компания</h1>
@@ -53,7 +53,7 @@ $strategies = array(
                 <p class="w-50 my-3 mx-auto">
                     Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями
                 </p>
-                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>
+                <a class="btn contact-me-btn <?php echo 'selected-menu'; ?>" href="<?php echo 'mailto:info@dohod.com'; ?>">Свяжитесь с нами</a>
             </div>
         </div>
     </header>
@@ -94,7 +94,7 @@ $strategies = array(
                 <div class="text-right">
                     <p>
                     </p>
-                    <a class="btn" href="investmentOptions.php">Подробнее</a>
+                    <a class="btn <?php echo 'selected-menu'; ?>" href="<?php echo 'investmentOptions.php'; ?>">Подробнее</a>
                 </div>
             </section>
             <section id="strategies">
@@ -113,7 +113,7 @@ $strategies = array(
                     <?php endforeach; ?>
                 </ul>
                 <div class="text-right">
-                    <a class="btn" href="strategies.php">Подробнее</a>
+                <a class="btn <?php echo 'selected-menu'; ?>" href="<?php echo 'strategies.php'; ?>">Подробнее</a>
                 </div>
             </section>
         </div>
