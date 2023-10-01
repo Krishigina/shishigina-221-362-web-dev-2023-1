@@ -121,10 +121,11 @@ $strategies = array(
 
     <footer class="footer">
         <div class="container">
-            <?php
+        <?php
+            date_default_timezone_set('Europe/Moscow');
             $currentDate = date('d.m.Y в H:i:s');
             echo 'Сформировано ' . $currentDate;
-            ?>
+        ?>
         </div>
     </footer>
 </body>
