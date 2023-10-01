@@ -1,97 +1,94 @@
 <?php
-$string =  '<!DOCTYPE html>'.
-'<html lang="ru">'.
-''.
-'<head>'.
-'    <meta charset="UTF-8">'.
-'    <title>Шишигина 221-362 Лаб3</title>'.
-'    <link rel="preconnect" href="https://fonts.googleapis.com">'.
-'    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'.
-'    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">'.
-'    <link rel="stylesheet" href="styles/main.css">'.
-'</head>'.
-''.
-'<body>'.
-'    <header class="header">'.
-'        <div class="container">'.
-'            <nav class="main-menu">'.
-'                <a href="index.php">Описание</a>'.
-'                <a href="#investment-options">Виды инвестиций</a>'.
-'                <a href="#strategies">Стратегии</a>'.
-'            </nav>'.
-'            <div class="text-center py-5">'.
-'                <h1 class="name">Инвестиционная компания</h1>'.
-'                <h2>Управление инвестициями для финансовой стабильности</h2>'.
-'                <p class="w-50 my-3 mx-auto">'.
-'                    Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями'.
-'                </p>'.
-'                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>'.
-'            </div>'.
-'        </div>'.
-'    </header>'.
-''.
-'    <main>'.
-'        <div class="container">'.
-''.
-'            <section id="investment-options">'.
-'                <p></p>'.
-'                <h1>Виды инвестиций</h1>'.
-'                <p>'.
-'                    Компания предлагает широкий спектр инвестиционных возможностей с различными уровнями риска и'.
-'                    доходности.'.
-'                    Наши клиенты могут выбирать из таких видов инвестиций:'.
-'                </p>'.
-'                <table>'.
-'                    <tr>'.
-'                        <th>Вид инвестиции</th>'.
-'                        <th>Описание</th>'.
-'                        <th>Уровень риска</th>'.
-'                        <th>Ожидаемая доходность</th>'.
-'                    </tr>'.
-'                    <tr>'.
-'                        <td>Акции на фондовом рынке</td>'.
-'                        <td>Инвестирование в акции компаний на фондовом рынке</td>'.
-'                        <td>Высокий</td>'.
-'                        <td>Высокая</td>'.
-'                    </tr>'.
-'                    <tr>'.
-'                        <td>Облигации и ценные бумаги</td>'.
-'                        <td>Инвестирование в облигации и другие ценные бумаги</td>'.
-'                        <td>Средний</td>'.
-'                        <td>Средняя</td>'.
-'                    </tr>'.
-'                    <tr>'.
-'                        <td>Инвестиции в недвижимость</td>'.
-'                        <td>Покупка и аренда недвижимости для получения дохода</td>'.
-'                        <td>Низкий</td>'.
-'                        <td>Стабильная</td>'.
-'                    </tr>'.
-'                    <tr>'.
-'                        <td>Финансирование стартапов и инновационных проектов</td>'.
-'                        <td>Инвестирование в молодые компании с высоким потенциалом</td>'.
-'                        <td>Высокий</td>'.
-'                        <td>Высокая</td>'.
-'                    </tr>'.
-'                </table>'.
-''.
-'                <div class="text-right">'.
-'                    <p>'.
-''.
-'                    </p>'.
-'                </div>'.
-'            </section>'.
-'        </div>'.
-'    </main>'.
-''.
-'    <footer class="footer">'.
-'        <div class="container">'.
-'            &copy; 2023 Инвестиционная компания "Доход"'.
-'        </div>'.
-'    </footer>'.
-''.
-'</body>'.
-''.
-'</html>';
+$seconds = date('s');
+$imageClass = ($seconds % 2 == 0) ? 'images/background.jpg' : 'images/background2.jpg';
+$pageTitle = 'Шишигина 221-362 Лаб3';
 
- echo $string; 
+$investmentOptions = array(
+    array('Вид инвестиции', 'Описание', 'Уровень риска', 'Ожидаемая доходность'),
+    array('Акции на фондовом рынке', 'Инвестирование в акции компаний на фондовом рынке', 'Высокий', 'Высокая'),
+    array('Облигации и ценные бумаги', 'Инвестирование в облигации и другие ценные бумаги', 'Средний', 'Средняя'),
+    array('Инвестиции в недвижимость', 'Покупка и аренда недвижимости для получения дохода', 'Низкий', 'Стабильная'),
+    array('Финансирование стартапов и инновационных проектов', 'Инвестирование в молодые компании с высоким потенциалом', 'Высокий', 'Высокая')
+);
+
+$strategies = array(
+    'Долгосрочные инвестиции в устойчивые компании',
+    'Активное трейдинговое управление портфелем',
+    'Диверсификация инвестиций для снижения риска',
+    'Использование алгоритмического трейдинга и искусственного интеллекта'
+);
 ?>
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?= $pageTitle ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .header {
+            background-color: black;
+            color: white;
+            background-image: url(<?php echo $imageClass; ?>);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-menu">
+                <a href="index.php"><?php echo 'Описание'; ?></a>
+                <a href="#investment-options"><?php echo 'Виды инвестиций'; ?></a>
+                <a href="strategies.php"><?php echo 'Стратегии'; ?></a>
+            </nav>
+            <div class="text-center py-5">
+                <h1 class="name">Инвестиционная компания</h1>
+                <h2>Управление инвестициями для финансовой стабильности</h2>
+                <p class="w-50 my-3 mx-auto">
+                    Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями
+                </p>
+                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="investment-options">
+                <p></p>
+                <h1>Виды инвестиций</h1>
+                <p>
+                    Компания предлагает широкий спектр инвестиционных возможностей с различными уровнями риска и
+                    доходности.
+                    Наши клиенты могут выбирать из таких видов инвестиций:
+                </p>
+                <table>
+                <?php foreach ($investmentOptions as $option) : ?>
+                        <tr>
+                            <?php foreach ($option as $cell) : ?>
+                                <td><?php echo $cell; ?></td>
+                            <?php endforeach; ?>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <?php
+            $currentDate = date('d.m.Y в H:i:s');
+            echo 'Сформировано ' . $currentDate;
+            ?>
+        </div>
+    </footer>
+</body>
+
+</html>
