@@ -26,10 +26,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 echo "</table>";
 
-// SQL-запрос для получения данных из таблицы dbimages
+// SQL-запрос для получения данных из таблицы dbimagesf
 $sql = mysqli_query($mysql, "SELECT * FROM `dbimages`");
 
-// Вывод изображений на страницу
 while ($image_name = mysqli_fetch_assoc($sql)) {
     ?>
     <div class="image-container">
@@ -37,7 +36,6 @@ while ($image_name = mysqli_fetch_assoc($sql)) {
     </div>
     <?php
 }
-
 ?>
 </div>
 </main>
