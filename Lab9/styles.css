@@ -39,9 +39,9 @@ table {
 
 th,
 td {
-    padding: 10px;
+    padding: 1%;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1% solid #ddd;
 }
 
 th {
@@ -57,14 +57,42 @@ tr:hover {
 }
 
 .main {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .typeE {
-    border: 2px solid red; 
-    padding: 8px; 
+    border: 2% solid red; 
+    padding: 8%; 
     display: inline-block; 
-    margin-right: 8px;
+    margin-right: 8%;
     margin-bottom: 2%;
+}
+.btn {
+    text-decoration: none;
+    color: #1214a1;
+    font-weight: bold;
+    border: 5% solid #1214a1;
+    padding: 0.8%;
+    border-radius: 5%;
+}
+
+.btn:hover {
+    transition: color 0.5s, border-color 0.5s;
+    color: rgb(204, 0, 102);
+    border-color: rgb(204, 0, 102);
+}
+
+.contact-form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.form-field {
+    margin-bottom: 10px;
 }
