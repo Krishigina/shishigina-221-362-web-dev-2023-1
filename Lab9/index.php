@@ -63,12 +63,11 @@
                 $k = $i + 1;
                 $argument = $startArgument + ($i * $step);
             
-                // В зависимости от типа верстки, используем соответствующий код
                 if ($layoutType == 'A' || $layoutType == 'B' || $layoutType == 'C' || $layoutType == 'D') {
-                    if ($startArgument == 25) {
+                    if ($argument == 25) {
                         $value = 'Ошибка';
                     } else {
-                        $value = ($argument <= 10) ? (10 * $startArgument - 5) : (($argument > 10 && $argument < 20) ? (($argument + 3) * pow($argument, 2)) : (3 / ($startArgument - 25)));
+                        $value = ($argument <= 10) ? (10 * $startArgument - 5) : (($argument > 10 && $argument < 20) ? (($argument + 3) * pow($argument, 2)) : (3 / ($argument - 25)));
                     }
                     $values[] = $value;
             
@@ -93,10 +92,10 @@
                         </table>";
                     }
                 } elseif ($layoutType == 'E') {
-                    if ($startArgument == 25) {
+                    if ($argument == 25) {
                         $value = 'Ошибка';
                     } else {
-                        $value = ($argument <= 10) ? (10 * $startArgument - 5) : (($argument > 10 && $argument < 20) ? (($argument + 3) * pow($argument, 2)) : (3 / ($startArgument - 25)));
+                        $value = ($argument <= 10) ? (10 * $startArgument - 5) : (($argument > 10 && $argument < 20) ? (($argument + 3) * pow($argument, 2)) : (3 / ($argument - 25)));
                     }
                     $values[] = $value;
             
@@ -124,7 +123,7 @@
     <footer class="footer">
         <div class="container">
             <?php
-            echo "<footer><p>Тип верстки: $layoutType</p></footer>";
+               echo "<footer><p>Тип верстки: " . ($layoutType ?? "") . "</p></footer>";
             ?>
             &copy; 2023 Циклические алгоритмы. Условия в алгоритмах. Табулирование функций
         </div>
