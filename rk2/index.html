@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Инвестиционная компания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-menu">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Логотип">
+                </div>
+                <a href="index.html">Главная</a>
+                <a href="about.html">Описание</a>
+                <a href="#investment-options">Виды инвестиций</a>
+                <a href="#strategies">Стратегии</a>
+                <a href="#terms">Термины и определения</a>
+                <a href="#store">Магазин</a>
+
+            </nav>
+            <div class="text-center py-5">
+                <h1 class="name">Инвестиционная компания</h1>
+                <h2>Управление инвестициями для финансовой стабильности</h2>
+                <p class="w-50 my-3 mx-auto">
+                    Мы предлагаем нашим клиентам достичь финансовой независимости через управление инвестициями
+                </p>
+                <a class="btn contact-me-btn" href="mailto:info@dohod.com">Свяжитесь с нами</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <form class="login-form" action="https://httpbin.org/post" method="POST">
+                <h2>Вход</h2>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label>
+                    <input type="checkbox" name="remember"> Запомнить меня
+                </label>
+
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2023 Инвестиционная компания "Доход"
+        </div>
+    </footer>
+
+</body>
+
+</html>
