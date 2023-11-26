@@ -72,6 +72,7 @@
                 ?>
             </section>
         </div>
+        <br><br><br><br><br><br><br><br><br><br>
     </main>
 
     <footer class="footer" id="footer">
@@ -89,7 +90,7 @@
                 </div>
                 <div style="text-align:left">Сформировано
                     <?php date_default_timezone_set("Europe/Moscow");
-                    $today = date('d.m.Y в H:is'); ?>
+                    $today = date('d.m.Y в H:i\'s'); ?>
                     <?= $today ?>
                 </div>
             </div>
@@ -103,91 +104,95 @@
 
 
 // функция ВЫВОДИТ ТАБЛИЦУ УМНОЖЕНИЯ В ТАБЛИЧНОЙ ФОРМЕ
-function outTableForm() {
-    if( !isset($_GET['content']) || $_GET['content'] == 'n/a') {
-        
-        for($i=2; $i<10; $i++) {
+function outTableForm()
+{
+    if (!isset($_GET['content']) || $_GET['content'] == 'n/a') {
+
+        for ($i = 2; $i < 10; $i++) {
             echo '<table class="tvRow">';
             outRowTable($i);
             echo '</table>';
         }
-    } 
-    else {
+    } else {
         echo '<table class="tvSingleRow">';
-        outRowTable( $_GET['content'] );
+        outRowTable($_GET['content']);
         echo '</table>';
-        
+
     }
 }
 
 // функция ВЫВОДИТ ТАБЛИЦУ УМНОЖЕНИЯ В БЛОЧНОЙ ФОРМЕ
-function outDivForm () {
-    if( !isset($_GET['content']) || $_GET['content']=="n/a") {
-        for($i=2; $i<10; $i++) {
+function outDivForm()
+{
+    if (!isset($_GET['content']) || $_GET['content'] == "n/a") {
+        for ($i = 2; $i < 10; $i++) {
             echo '<div class="bvRow">';
-            outRow( $i );
+            outRow($i);
             echo '</div>';
         }
-    }
-    else {
+    } else {
         echo '<div class="bvSingleRow">';
-        outRow( $_GET['content'] );
+        outRow($_GET['content']);
         echo '</div>';
     }
 }
 
 //функция ВЫВОДИТ СТОЛБЕЦ ТАБЛИЦЫ УМНОЖЕНИЯ ДЛЯ DIV
-function outRow($n){
-    for($i=2; $i<=9; $i++) {
+function outRow($n)
+{
+    for ($i = 2; $i <= 9; $i++) {
         echo outNumAsLink($n);
         echo 'x';
         echo outNumAsLink($i);
         echo '=';
-        echo outNumAsLink($i*$n).'<br>';
+        echo outNumAsLink($i * $n) . '<br>';
 
     }
 }
 
 //функция ВЫВОДИТ СТОЛБЕЦ ТАБЛИЦЫ УМНОЖЕНИЯ ДЛЯ TABLE
-function outRowTable($n){
-    for ($i=2; $i<=9; $i++){
+function outRowTable($n)
+{
+    for ($i = 2; $i <= 9; $i++) {
         echo '<tr><td>';
         echo outNumAsLink($n);
         echo 'x';
         echo outNumAsLink($i);
         echo '</td><td>';
-        echo outNumAsLink($i*$n);
+        echo outNumAsLink($i * $n);
         echo '</td></tr>';
     }
 }
 
-function outNumAsLink( $x ) {
-    if( $x<=9 ){
-        echo '<a href="?content='.$x.'&html_type=';
+function outNumAsLink($x)
+{
+    if ($x <= 9) {
+        echo '<a href="?content=' . $x . '&html_type=';
         if (!isset($_GET['html_type']))
             echo 'TABLE"';
-        else 
-            echo $_GET['html_type'].'"';
-        echo '>'.$x.'</a>';
-    }
-    else
+        else
+            echo $_GET['html_type'] . '"';
+        echo '>' . $x . '</a>';
+    } else
         echo $x;
 }
 
-function getHTMLType() {
+function getHTMLType()
+{
     if (!isset($_GET['html_type']))
         return 'Верстка не выбрана';
-    else if ($_GET['html_type']=="TABLE")
+    else if ($_GET['html_type'] == "TABLE")
         return 'Табличная верстка';
     else
         return 'Блочная верстка';
 }
 
-function getContent() {
+function getContent()
+{
     if (!isset($_GET['content']) || $_GET['content'] == 'n/a')
         return 'Вся таблица умножения';
     else
-        return 'Таблица умножения на '.$_GET['content'];
+        return 'Таблица умножения на ' . $_GET['content'];
 }
 
 ?>
